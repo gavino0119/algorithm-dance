@@ -31,7 +31,7 @@ public class MergeSort {
         int[] tmp = new int[end-start+1];
         // 记录第一个数组中需要遍历的下标
         int i = start;
-        // 记录第一个数组中需要遍历的下标
+        // 记录第二个数组中需要遍历的下标
         int j = mid+1;
         // 临时数组下标
         int index = 0;

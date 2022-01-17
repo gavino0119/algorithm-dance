@@ -16,10 +16,18 @@ public class Main01 {
 
     private static int binarySearch(int[] arr, int n){
         Arrays.sort(arr);
-        int len = arr.length;
-        int l = 0;
-        int r = len-1;
-        int mid = (l+r)>>1;
+        int start = 0;
+        int end = arr.length-1;
+        while (start<=end){
+            int mid = (start+end)>>>1;
+            if(arr[mid]==n){
+                return mid;
+            }else if(arr[mid]<n){
+                start = mid+1;
+            }else if(arr[mid]>n){
+                end = mid-1;
+            }
+        }
         return -1;
     }
 }
