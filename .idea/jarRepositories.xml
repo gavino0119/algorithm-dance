@@ -2,6 +2,11 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="thirdparty" />
+      <option name="name" value="thirdparty" />
+      <option name="url" value="http://10.130.24.36:8383/nexus/content/repositories/thirdparty" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="nexus_central" />
       <option name="name" value="nexus_central" />
       <option name="url" value="http://10.130.24.36:8383/nexus/content/repositories/central/" />
@@ -30,6 +35,21 @@
       <option name="id" value="snapshots" />
       <option name="name" value="snapshots" />
       <option name="url" value="http://10.130.24.36:8383/nexus/content/repositories/snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus" />
+      <option name="name" value="nexus" />
+      <option name="url" value="http://10.130.24.36:8383/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="snapshots" />
+      <option name="url" value="http://10.130.24.36:8383/nexus/content/repositories/snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus-release" />
+      <option name="name" value="nexus-release" />
+      <option name="url" value="http://10.130.24.36:8383/nexus/content/repositories/releases/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="jboss.community" />
