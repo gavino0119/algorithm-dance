@@ -30,10 +30,18 @@ public class QuickSort {
 
         }
     }
-    private static void swap(int a,int b){
+
+    // 错误的数组交换元素
+    private static void swapErr(int a,int b){
         int tmp = a;
         a = b;
         b = tmp;
+    }
+    // 这样写才是对的
+    private static void swap(int[] arr, int a,int b){
+        int tmp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = tmp;
     }
     private static void testSort(int[] arr){
         quickSort1(arr,0,arr.length-1);
