@@ -9,10 +9,10 @@ import java.util.Arrays;
  */
 public class QuickSort {
     private static void quickSort1(int[] arr, int start, int end){
-        int flag = arr[start];
-        int l = start;
-        int r = end;
         if (start<end){
+            int flag = arr[start];
+            int l = start;
+            int r = end;
             while (l<r){
                 while (l<r && flag<=arr[r]){
                     r--;
@@ -39,7 +39,7 @@ public class QuickSort {
         quickSort1(arr,0,arr.length-1);
     }
     public static void main(String[] args) {
-        int[] arr = new int[]{3,90,7,6,9,2,0,3,5454,34,1,2,8,3,0,8,6,14,26};
+        int[] arr = new int[]{5,1,1,2,0,0};
         System.out.println(Arrays.toString(arr));
         testSort(arr);
         System.out.println(Arrays.toString(arr));

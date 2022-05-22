@@ -15,11 +15,11 @@ public class QuickSort {
         System.out.println(Arrays.toString(arr));
     }
     private static void sort(int[] arr,int start,int end){
-        int flag = arr[start];
-        int l = start;
-        int r = end;
 
         if(start<end){
+            int flag = arr[start];
+            int l = start;
+            int r = end;
             while (l<r){
                 while (l<r && arr[r]>=flag){
                     r--;
