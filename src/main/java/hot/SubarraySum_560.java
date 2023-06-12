@@ -41,9 +41,9 @@ public class SubarraySum_560 {
      */
     private static int subarraySumOpt(int[] nums, int k) {
         // key：前缀和，value：key 对应的前缀和的个数
-        Map<Integer, Integer> preSumFreq = new HashMap<>();
+        Map<Integer, Integer> preSumMap = new HashMap<>();
         // 对于下标为 0 的元素，前缀和为 0，个数为 1
-        preSumFreq.put(0, 1);
+        preSumMap.put(0, 1);
 
         int preSum = 0;
         int count = 0;
@@ -51,12 +51,12 @@ public class SubarraySum_560 {
             preSum += num;
 
             // 先获得前缀和为 preSum - k 的个数，加到计数变量里
-            if (preSumFreq.containsKey(preSum - k)) {
-                count += preSumFreq.get(preSum - k);
+            if (preSumMap.containsKey(preSum - k)) {
+                count += preSumMap.get(preSum - k);
             }
 
             // 然后维护 preSumFreq 的定义
-            preSumFreq.put(preSum, preSumFreq.getOrDefault(preSum, 0) + 1);
+            preSumMap.put(preSum, preSumMap.getOrDefault(preSum, 0) + 1);
         }
         return count;
     }
