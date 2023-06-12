@@ -10,17 +10,17 @@ public class UnionFind {
     private int count;
     private Map<Integer, Integer> parent; // (curr, leader)
 
-    UnionFind(int[] arr) {
+    public UnionFind(int[] arr) {
         parent = new HashMap<>();
-        for (int v : arr)
+        for (int v : arr) {
             parent.put(v, v); // 初始时，各自为战，自己是自己的领队
+        }
 
         count = parent.size(); // 而非 arr.length，因可能存在同 key 的情况
-        // 感谢 [@icdd](/u/icdd/) 同学的指正
     }
 
     // 结盟
-    void union(int p, int q) {
+    public void union(int p, int q) {
         // 不只是 p 与 q 结盟，而是整个 p 所在队伍 与 q 所在队伍结盟
         // 结盟需各领队出面，而不是小弟出面
         Integer rootP = find(p), rootQ = find(q);
@@ -36,7 +36,7 @@ public class UnionFind {
     }
 
     // 查找领队
-    Integer find(int p) {
+    public Integer find(int p) {
         if (!parent.containsKey(p))
             return null;
 
